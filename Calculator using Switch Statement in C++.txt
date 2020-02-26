@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    char ch;
+   char choice;
+    long num1, num2, x;
+    
+
+    do {
+        cout << "Please choose your option:" << endl;
+        cout << "press + for addition" << endl;
+        cout << "press - for subtraction" << endl;
+        cout << "press x for Multiplication" << endl;
+        cout << "press / for Division" << endl;
+        
+        cout<<"Enter Your Choice:";
+    cin >> choice;
+        switch (choice)
+        {
+
+        case '+':
+            cout << "Enter two numbers: " << endl;
+            cin >> num1 >> num2;
+            x = num1 + num2;
+            cout << "Sum = " << x;
+            break;
+
+
+        case '-':
+            cout << "Enter two numbers: " << endl;
+            cin >> num1 >> num2;
+            x = num1 - num2;
+            cout << "Subtraction = " << x << endl;
+            break;
+
+
+        case 'x':
+            cout << "Enter two numbers: " << endl;
+            cin >> num1 >> num2;
+            x = num1 * num2;
+            cout << "Product = " << x;
+            break;
+        case '/':
+            cout << "Enter Dividend: ";
+            cin >> num1;
+            cout << "Enter Divisor: ";
+            cin >> num2;
+            x = num1 / num2;
+            cout << "Quotient = " << x << endl;
+            break;
+        default:
+            cout << " you entered wrong number!" << endl;
+        }
+        cout << "do you want to run agian (y/n):";
+        cin >> ch;
+    } while (ch =='y' || ch !='n');
+        return 0;
+}
